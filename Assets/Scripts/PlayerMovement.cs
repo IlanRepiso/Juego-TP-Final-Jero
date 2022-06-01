@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float PlayerSpeed;
-    public float PlayerRotation;
-    public bool isTakingDmg;
-    public int HealthBar;
+    float PlayerSpeed = 0.5f;
+    float PlayerRotation = 7.5f;
+    bool isTakingDmg;
+    bool isAlive;
+    public int HealthBar = 100;
 
     // Start is called before the first frame update
     void Start()
     {
         isTakingDmg = false;
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -37,6 +40,18 @@ public class PlayerMovement : MonoBehaviour
         if (isTakingDmg)
         {
             HealthBar -= 1;
+        }
+        if (HealthBar > 0)
+        {
+            isAlive = true;
+        }
+        if (HealthBar < 1)
+        {
+            isAlive = false;
+        }
+        if (isAlive == false)
+        {
+            SceneManager.LoadScene("Gameplay");
         }
     }
     void OnCollisionEnter(Collision other)
