@@ -46,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 Debug.Log("hi");
                 GameObject clon = Instantiate(SwordAttack, gameObject.transform.position+ gameObject.transform.forward, Quaternion.Euler(0,0,0), transform);
-                Destroy(clon, 1);
+                Destroy(clon, 0.5f);
             }
         }
         else if (Scythe == true)
@@ -57,12 +57,12 @@ public class PlayerAttack : MonoBehaviour
                 Destroy(clon, 1);
             }
         }
-        else
+        else if (Punch == true)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject clon = Instantiate(PunchAttack, gameObject.transform.position + gameObject.transform.forward, Quaternion.Euler(0, 0, 0), transform);
-                Destroy(clon, 1);
+                Destroy(clon, 0.25f);
             }
         }
     }
