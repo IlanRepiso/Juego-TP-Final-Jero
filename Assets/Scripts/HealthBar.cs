@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     bool isTakingDmg;
     bool isAlive;
-    int healthBar = 100;
+    public int healthBar = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour
     {
         if (isTakingDmg)
         {
-            healthBar -= 1;
+            healthBar -= 3;
         }
         if (healthBar > 0)
         {
@@ -38,14 +38,14 @@ public class HealthBar : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             isTakingDmg = true;
         }
     }
     void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.name == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             isTakingDmg = false;
         }
