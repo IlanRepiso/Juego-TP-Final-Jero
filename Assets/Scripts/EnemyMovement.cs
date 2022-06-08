@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform Player;
-    float MoveSpeed = 4;
+    float MoveSpeed = 25;
     int MinDist = 0;
 
     // Start is called before the first frame update
