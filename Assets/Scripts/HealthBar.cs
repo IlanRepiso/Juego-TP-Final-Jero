@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     bool isTakingDmg;
     bool isAlive;
     public int healthBar = 100;
+    public Text health;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        health.text = healthBar.ToString(); 
         if (isTakingDmg)
         {
             healthBar -= 3;
