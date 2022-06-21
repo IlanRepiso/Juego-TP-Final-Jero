@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     float PlayerSpeed = 0.5f;
-    float PlayerRotation = 7.5f;
+    float PlayerRotation = 5;
 
     // Start is called before the first frame update
     void Start()
