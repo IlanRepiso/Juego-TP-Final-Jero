@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: aa53321de7ac4f143a5480746d32e99a
+guid: e9bf3085c59db83459d92801e9246cd9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Material.002
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cone
+    4300000: Cube
   externalObjects:
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: a62492af873555f45a9ace97f8eb007a, type: 2}
+      name: Cyberpunk
+    second: {fileID: 2800000, guid: b5374445c2a55ed46901e97ec2fd6a91, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
